@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="utils.js"></script>
+  <script src="visual.js"></script>
+  <script src="js.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Gaussian Elimination</title>
+
+
+
+</head>
+<body>
+
+  <div class="card">
+    <h2>Eliminasi Gauss atau Gaussian Elimination</h2>
+
+    <div class="controls">
+
+      <label for="matrixSize">Baris atau Rows (n):</label>
+      <input id="matrixSize" type="number" min="1" max="200" value="3" />
+
+      <button id="generateBtn">Generate n × (n+1) Matrix</button>
+      <button id="clearBtn">Hapus Semua Value atau Clear Values</button>
+      <button id="solveBtn">Selesaikan atau Solve</button>
+
+    </div>
+
+    <div id="matrixContainer"></div>
+
+    <h3 style="margin-top:14px;">Visualization</h3>
+    <div id="visualization" aria-live="polite"></div>
+
+    <h3 style="margin-top:14px;">Solution</h3>
+    <div id="solution" aria-live="polite"></div>
+  </div>
+
+
+<script>
+
+    // Ambil document element
+    // fetch document elemenmt
+    const generateBtn = document.getElementById('generateBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const solveBtn = document.getElementById('solveBtn');
+    const matrixSizeInput = document.getElementById('matrixSize');
+    const matrixContainer = document.getElementById('matrixContainer');
+    const visualization = document.getElementById('visualization');
+    const solution = document.getElementById('solution');
+
+
+
+    // Base Event
+    generateBtn.addEventListener('click', generateMatrix);
+    clearBtn.addEventListener('click', clearValues);
+    solveBtn.addEventListener('click', solveAndExplain);
+
+    // Buat Matriks
+    // Generate The matrix
+    generateMatrix();
+
+
+</script>
+
+
+</body>
+</html>

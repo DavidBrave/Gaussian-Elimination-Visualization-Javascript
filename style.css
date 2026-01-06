@@ -1,0 +1,135 @@
+
+:root {
+    --card-width: 38vw;
+    --card-max-width: 1100px;
+    --cell-width: 80px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: #fafafa;
+    color: #111;
+}
+
+.card {
+    padding: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    max-width: var(--card-max-width);
+    width: var(--card-width);
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+h2 { margin-top: 0; }
+
+.controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+button:hover { filter: brightness(0.98); }
+
+#matrixContainer {
+    margin-top: 16px;
+    overflow: auto;
+    border: 1px solid #eee;
+    padding: 8px;
+    border-radius: 6px;
+    max-height: 60vh;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #e0e0e0;
+    padding: 6px 8px;
+    text-align: center;
+}
+
+input[type="number"], input[type="text"] {
+    width: var(--cell-width);
+    padding: 6px 4px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+#visualization {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #fbfbff;
+    border: 1px solid #eef;
+}
+
+#visualization p {
+    margin: 6px 0;
+    font-family: "Courier New", monospace;
+}
+
+
+#solution {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: auto;
+    overflow: visible;
+    margin-top: 12px;
+}
+
+.step {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px dashed #e2e2e2;
+    background: #fcfcff;
+}
+
+.step h4 { margin: 6px 0 10px 0; }
+
+.two-tables {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.matrix-box {
+    min-width: 180px;
+    overflow: auto;
+}
+
+.small { 
+    font-size: 0.9rem; 
+}
+
+.final-solution { 
+    background: #f7fff7; 
+    border: 1px solid #d7f0d7; 
+    padding: 12px; 
+}
+
+
+@media (max-width: 560px) {
+    :root { --cell-width: 60px; }
+    .controls { flex-direction: column; align-items: stretch; }
+    .two-tables { flex-direction: column; }
+}
